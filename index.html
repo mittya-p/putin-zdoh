@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="apple-touch-icon" href="#" />
+    <title>Путін здох!</title>
+    <link rel="stylesheet" href="./style.css" />
+    <!-- <link rel="stylesheet" href="./style_test.css" /> -->
+    <link rel="stylesheet" href="./style-popup.css" />
+    <link rel="stylesheet" href="./style-media.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@0,600;0,800;1,600;1,800&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- <audio src="./audio/Скрябін_Коломийки.mp3" controls></audio> -->
+      <div class="timer-conteiner">
+        <div class="timer">
+          <p class="result">Твій путін стрибав</p>
+          <div class="second">00</div>
+          <p>секунд</p>
+          <button class="open-popup">Скринька побажаннь путіну</button>
+        </div>
+        <div class="best-result-conteiner">
+          <div class="title-best-result">Кращий результат</div>
+          <div class="best-result">0</div>
+        </div>
+      </div>
+
+      <div class="game">
+        <div class="putin"></div>
+        <div class="antitankStartPos"></div>
+        <div class="levelImg"></div>
+        <div class="roadSign"></div>
+      </div>
+      <div class="btnContainer">
+        <button class="btnStart">СТАРТ!</button>
+        <button class="btnJump">Хто не скаче - той москаль!</button>
+      </div>
+      <h1>Тисни пробіл щоб путін стрибнув.</h1>
+      <h2>Та як би ти не намагався він все одно здохне!</h2>
+    </div>
+    <div class="popup__bg">
+      <form class="popup">
+        <svg
+          class="close-popup"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill="#2982ff"
+            d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
+          />
+        </svg>
+        <label>
+          <input type="text" name="name" autocomplete="off" />
+          <div class="label__text">Ваше ім'я</div>
+        </label>
+        <label>
+          <textarea name="message" autocomplete="off"></textarea>
+          <div class="label__text">
+            Коротко та лаконічно, не стримуйте себе! Ваше побажання путіну:
+          </div>
+        </label>
+        <div
+          class="alert-success"
+          id="success"
+          style="display: none"
+          role="alert"
+        ></div>
+        <button type="submit">Відправити</button>
+      </form>
+    </div>
+
+    <script src="./userinfo.js"></script>
+    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  </body>
+</html>
