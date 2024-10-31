@@ -152,7 +152,7 @@ let isAlive = setInterval(function () {
 let audioSong
 function soundStart() {
   audioSong = new Audio('./audio/Скрябін_Коломийки.mp3')
-  audioSong.volume = 0.1
+  audioSong.volume = 0.05
   audioSong.play()
 }
 function soundStop(audioSong) {
