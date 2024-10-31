@@ -52,8 +52,9 @@ buttonJump.addEventListener('click', function () {
 })
 
 function jump() {
-  if (putin.classList != 'jump') {
+  if (putin.classList != 'jump' && putin.classList != 'putin-in-Gaaga') {
     putin.classList.add('jump')
+    soundAfterJumpStart()
   }
   setTimeout(function () {
     putin.classList.remove('jump')
@@ -70,7 +71,7 @@ let bestResult = 00
 function win() {
   if (second === 25) {
     clearInterval(interval)
-    soundStop(audio)
+    soundStop(audioSong)
     putin.classList.remove('putin')
     putin.classList.add('putin-in-Gaaga')
     antitank.classList.remove('antitank')
@@ -86,6 +87,7 @@ function win() {
 
     alert('Вітаємо! Ви виграли! Путін дожив до Гааги!')
     bestResultElement.innerText = 0
+    soundInGaagaStart()
   }
 }
 
@@ -124,7 +126,7 @@ let isAlive = setInterval(function () {
     window.getComputedStyle(antitank).getPropertyValue('left')
   )
   if (antitankLeft < 65 && antitankLeft > 20 && putinTop >= 150) {
-    soundStop(audio)
+    soundStop(audioSong)
     startButton.style.visibility = 'visible'
     alert('путін ЗДОХ! :)')
     antitank.classList.add('antitank', 'antitankStartPos')
@@ -147,14 +149,25 @@ let isAlive = setInterval(function () {
 }, 10)
 
 // Music
-let audio
+let audioSong
 function soundStart() {
-  audio = new Audio('./audio/Скрябін_Коломийки.mp3')
-  audio.play()
+  audioSong = new Audio('./audio/Скрябін_Коломийки.mp3')
+  audioSong.volume = 0.1
+  audioSong.play()
 }
-function soundStop(audio) {
-  audio.pause()
-  audio.currentTime = 0
+function soundStop(audioSong) {
+  audioSong.pause()
+  audioSong.currentTime = 0
+}
+let audioAfterJump
+function soundAfterJumpStart() {
+  audioAfterJump = new Audio('./audio/hrenas-dva.mp3')
+  audioAfterJump.play()
+}
+let audioInGaaga
+function soundInGaagaStart() {
+  audioInGaaga = new Audio('./audio/potomu-chto-potomu.mp3')
+  audioInGaaga.play()
 }
 
 // Popup
