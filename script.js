@@ -11,6 +11,8 @@ const audioPlayer = document.getElementById('audioPlayer')
 
 const volumeControl = document.getElementById('volumeControl')
 
+const defenceNameElement = document.querySelector('.defenceName')
+
 volumeControl.addEventListener('input', () => {
   audioSong.volume = volumeControl.value
 })
@@ -44,6 +46,7 @@ function start() {
     antitank.classList.add('antitank')
     putin.classList.remove('putin-in-Gaaga')
     putin.classList.add('putin')
+    updateMessageAntitank()
   }
 }
 
@@ -69,6 +72,20 @@ function jump() {
   }, 350)
 }
 
+// Defence name functions
+function updateMessageAntitank() {
+  defenceNameElement.textContent = 'Протитанковий їжак'
+}
+function updateMessageJavelin() {
+  defenceNameElement.textContent = 'Джавелін'
+}
+function updateMessageJet() {
+  defenceNameElement.textContent = 'F-16'
+}
+function updateMessageFpv() {
+  defenceNameElement.textContent = 'Русоріз Стерненка'
+}
+
 // Timer
 
 let second = 00
@@ -77,7 +94,7 @@ let interval
 let bestResult = 00
 
 function win() {
-  if (second === 25) {
+  if (second === 30) {
     clearInterval(interval)
     soundStop(audioSong)
     putin.classList.remove('putin')
@@ -87,6 +104,7 @@ function win() {
     antitank.classList.remove('rocket')
     levelImg.classList.remove('javelin')
     antitank.classList.remove('jet')
+    antitank.classList.remove('fpv')
     second = 0
     startButton.style.visibility = 'visible'
     bestResultElement.innerText = 0
@@ -112,15 +130,21 @@ function startTimer() {
 }
 
 function increaseScore() {
-  if (second >= 8 && second < 15) {
+  if (second >= 8 && second < 14) {
     antitank.classList.remove('antitank', 'antitankStartPos')
     antitank.classList.add('rocket')
     levelImg.classList.add('javelin')
     roadSign.classList.add('roadSignVisibility')
-  } else if (second >= 15) {
-    antitank.classList.remove('antitank', 'antitankStartPos')
-    antitank.classList.add('jet')
+    updateMessageJavelin()
+  } else if (second >= 14 && second < 23) {
+    antitank.classList.remove('rocket')
     levelImg.classList.remove('javelin')
+    antitank.classList.add('jet')
+    updateMessageJet()
+  } else if (second >= 23) {
+    antitank.classList.remove('jet')
+    antitank.classList.add('fpv')
+    updateMessageFpv()
   }
 }
 
@@ -141,6 +165,7 @@ let isAlive = setInterval(function () {
     antitank.classList.remove('rocket')
     levelImg.classList.remove('javelin')
     antitank.classList.remove('jet')
+    antitank.classList.remove('fpv')
     roadSign.classList.remove('roadSignVisibility')
 
     if (second > bestResult) {

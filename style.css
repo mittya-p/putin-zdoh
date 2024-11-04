@@ -32,7 +32,7 @@ body {
 
 
     margin-top: 16px;
-    margin-left: auto;
+    margin-left: 50px;
     padding: 5px;
     height: 50px;
     border-radius: 10px;
@@ -260,6 +260,29 @@ h2 {
 
 
 @keyframes jetMov {
+    0% {
+        left: 580px;
+    }
+
+    100% {
+        left: -20px;
+    }
+
+}
+
+.fpv {
+    width: 60px;
+    height: 50px;
+    background-image: url(./img/fpv.png);
+    background-size: 60px 50px;
+    position: relative;
+    top: 110px;
+    left: 580px;
+    animation: fpvMov 2s infinite linear;
+    animation-delay: 1s;
+}
+
+@keyframes fpvMov {
     0% {
         left: 580px;
     }
