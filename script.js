@@ -157,7 +157,7 @@ let isAlive = setInterval(function () {
   let antitankLeft = parseInt(
     window.getComputedStyle(antitank).getPropertyValue('left')
   )
-  if (antitankLeft < 55 && antitankLeft > 25 && putinTop >= 150) {
+  if (antitankLeft < 50 && antitankLeft > 25 && putinTop >= 150) {
     soundStop(audioSong)
     startButton.style.visibility = 'visible'
     alert('путін ЗДОХ! :)')
