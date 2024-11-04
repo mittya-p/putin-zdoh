@@ -1,4 +1,4 @@
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 700px) {
     /* body {
     display: flex;
     justify-content: center;
@@ -6,6 +6,9 @@
     height: 100vh;
 } */
 
+    label {
+        font-family: "Amatic SC", sans-serif;
+    }
 
     .container {}
 
@@ -21,8 +24,8 @@
     }
 
     .open-popup {
-        margin-top: 16px;
-        margin-left: 50px;
+        margin-top: 0px;
+        margin-left: auto;
         padding: 5px;
         height: 50px;
         border-radius: 10px;
@@ -41,6 +44,8 @@
 
     .popup .label__text {
         font-family: "Amatic SC", sans-serif;
+        font-weight: 700;
+        color: gray;
     }
 
     .alert-success {
@@ -48,13 +53,16 @@
     }
 
     .result {
-        margin-right: 10px;
+        display: inline;
+        margin-left: 5px;
     }
 
     .second {
-        display: flex;
+        /* display: flex;
         align-items: center;
-        margin-right: 10px;
+        /* margin-right: 10px; */
+        margin-top: 12px;
+        margin-left: 20px;
     }
 
     .best-result-conteiner {
@@ -63,11 +71,17 @@
         font-size: 12px;
     }
 
-    .title-best-result {
-        margin-right: 10px;
+    p {
+        margin-left: 20px;
     }
 
-    .best-result {}
+    .title-best-result {
+        margin-left: 5px;
+    }
+
+    .best-result {
+        margin-left: 20px;
+    }
 
 
     audio {
