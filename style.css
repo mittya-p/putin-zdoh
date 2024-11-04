@@ -1,9 +1,7 @@
-/* body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body {
+
     height: 100vh;
-} */
+}
 
 
 .container {
@@ -169,7 +167,6 @@ h2 {
     color: yellow;
     font-family: 'Kaushan Script', cursive;
     font-size: 40px;
-    font-style: italic;
     text-shadow: 0 0 20px #000;
     margin-top: 80px;
 }

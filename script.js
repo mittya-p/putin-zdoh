@@ -7,6 +7,14 @@ const bestResultElement = document.querySelector('.best-result')
 const levelImg = document.querySelector('.levelImg')
 const roadSign = document.querySelector('.roadSign')
 
+const audioPlayer = document.getElementById('audioPlayer')
+
+const volumeControl = document.getElementById('volumeControl')
+
+volumeControl.addEventListener('input', () => {
+  audioSong.volume = volumeControl.value
+})
+
 window.addEventListener('load', function () {
   startListening()
 })
@@ -149,11 +157,13 @@ let isAlive = setInterval(function () {
 }, 10)
 
 // Music
+
 let audioSong
 function soundStart() {
   audioSong = new Audio('./audio/Скрябін_Коломийки.mp3')
   audioSong.volume = 0.05
   audioSong.play()
+  audioPlayer.style.display = 'block'
 }
 function soundStop(audioSong) {
   audioSong.pause()
@@ -377,13 +387,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // PuckJS button
 
-function startListening() {
-  setInterval(function () {
-    Puck.eval('BTN.read()', function (x) {
-      console.log(x)
-      if (x) {
-        jump()
-      }
-    })
-  }, 10)
-}
+// function startListening() {
+//   setInterval(function () {
+//     Puck.eval('BTN.read()', function (x) {
+//       console.log(x)
+//       if (x) {
+//         jump()
+//       }
+//     })
+//   }, 10)
+// }
