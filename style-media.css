@@ -8,6 +8,7 @@
 
     label {
         font-family: "Amatic SC", sans-serif;
+        font-weight: 700;
     }
 
     .container {}
@@ -20,6 +21,7 @@
     .timer {
         display: flex;
         font-family: "Amatic SC", sans-serif;
+        font-weight: 700;
         font-size: 12px;
     }
 
@@ -31,6 +33,7 @@
         border-radius: 10px;
         border-width: 3px;
         font-family: "Amatic SC", sans-serif;
+        font-weight: 700;
         font-size: 12px;
     }
 
@@ -40,6 +43,7 @@
 
     .popup button {
         font-family: "Amatic SC", sans-serif;
+        font-weight: 700;
     }
 
     .popup .label__text {
@@ -50,6 +54,7 @@
 
     .alert-success {
         font-family: "Amatic SC", sans-serif;
+        font-weight: 700;
     }
 
     .result {
@@ -68,6 +73,7 @@
     .best-result-conteiner {
         display: flex;
         font-family: "Amatic SC", sans-serif;
+        font-weight: 700;
         font-size: 12px;
     }
 
@@ -110,6 +116,7 @@
         border-radius: 10px;
         border-width: 3px;
         font-family: "Amatic SC", sans-serif;
+        font-weight: 700;
         font-size: 12px;
     }
 
@@ -126,6 +133,7 @@
         margin-right: 20px;
         padding: 20px;
         font-family: "Amatic SC", sans-serif;
+        font-weight: 700;
     }
 
     .btnStart:hover {}
@@ -135,6 +143,7 @@
     h1 {
 
         font-family: "Amatic SC", sans-serif;
+        font-weight: 700;
         font-size: 24px;
         margin-top: 40px;
     }
@@ -142,6 +151,7 @@
     h2 {
         text-align: center;
         font-family: "Amatic SC", sans-serif;
+        font-weight: 700;
         font-size: 24px;
         margin-top: 40px;
     }
