@@ -250,7 +250,7 @@
         top: 110px;
         left: 320px;
         animation: rocketMov 2.2s infinite linear;
-        animation-delay: 0s;
+        animation-delay: 1s;
     }
 
 
