@@ -99,7 +99,7 @@
     }
 
     .best-result {
-        margin-left: 20px;
+        margin-left: 15px;
     }
 
 
@@ -364,8 +364,8 @@
         }
 
         45%,
-        60% {
-            top: 10px;
+        65% {
+            top: 0px;
             /* Зависание на верхней точке */
         }
 

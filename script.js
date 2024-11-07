@@ -18,7 +18,7 @@ volumeControl.addEventListener('input', () => {
 })
 
 window.addEventListener('load', function () {
-  startListening()
+  // startListening()
 })
 
 // Start Game and Timer and Music
@@ -72,7 +72,7 @@ function jump() {
   }, 350)
 }
 
-// Defence name functions
+// Level name functions
 function updateMessageAntitank() {
   defenceNameElement.textContent = 'Протитанковий їжак'
 }
@@ -84,6 +84,9 @@ function updateMessageJet() {
 }
 function updateMessageFpv() {
   defenceNameElement.textContent = 'Русоріз Стерненка'
+}
+function updateMessageHague() {
+  defenceNameElement.textContent = 'Міжнародний суд в Гаазі'
 }
 
 // Timer
@@ -114,6 +117,7 @@ function win() {
     alert('Вітаємо! Ви виграли! Путін дожив до Гааги!')
     bestResultElement.innerText = 0
     soundInGaagaStart()
+    updateMessageHague()
   }
 }
 
@@ -157,7 +161,8 @@ let isAlive = setInterval(function () {
   let antitankLeft = parseInt(
     window.getComputedStyle(antitank).getPropertyValue('left')
   )
-  if (antitankLeft < 50 && antitankLeft > 25 && putinTop >= 150) {
+  console.log('putinTop:', putinTop, 'antitankLeft:', antitankLeft)
+  if (putinTop >= 150 && antitankLeft < 50 && antitankLeft > 25) {
     soundStop(audioSong)
     startButton.style.visibility = 'visible'
     alert('путін ЗДОХ! :)')
@@ -179,7 +184,7 @@ let isAlive = setInterval(function () {
     clearInterval(interval)
     antitank.classList.remove('antitank')
   }
-}, 10)
+}, 1)
 
 // Music
 
