@@ -434,20 +434,32 @@
         }
     }
 
-    @keyframes bounce {
+    @keyframes smoothBounce {
 
         0%,
         100% {
             transform: translateY(0);
+            animation-timing-function: ease-in;
+        }
+
+        25% {
+            transform: translateY(-10px);
+            animation-timing-function: ease-out;
         }
 
         50% {
+            transform: translateY(-20px);
+            animation-timing-function: ease-in;
+        }
+
+        75% {
             transform: translateY(-10px);
+            animation-timing-function: ease-out;
         }
     }
 
-
     .putin-in-Gaaga {
-        animation: bounce 1s infinite;
+        animation: smoothBounce 1.5s infinite;
     }
+
 }
