@@ -6,6 +6,27 @@
     align-items: center;
     height: 100vh;
 } */
+    #preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        /* Цвет фона заставки */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        /* Поверх всего остального содержимого */
+    }
+
+    .logo {
+        width: 150px;
+        /* Ширина логотипа */
+        height: auto;
+    }
+
     #volumeControl {
         width: 110px;
         /* Ширина ползунка */

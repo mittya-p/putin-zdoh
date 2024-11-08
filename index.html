@@ -26,111 +26,124 @@
       href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
   <body>
-    <div id="audioPlayer">
-      <input
-        type="range"
-        id="volumeControl"
-        min="0"
-        max="1"
-        step="0.1"
-        value="1"
+    <div id="preloader">
+      <img
+        src="./img/preloader.jpg"
+        alt="Logo"
+        class="animate__animated animate__zoomIn animate__duration-3s animate__delay-2s logo"
       />
-      <label for="volumeControl">Гучність</label>
     </div>
-    <div class="container">
-      <audio src="./audio/Скрябін_Коломийки.mp3"></audio>
-      <div class="timer-conteiner">
-        <div class="timer">
-          <p class="result">Твій путін стрибав</p>
-          <div class="second">00</div>
-          <p>секунд</p>
-          <button class="open-popup">Скринька побажаннь путіну</button>
-        </div>
+    <div class="content">
+      <div id="audioPlayer">
+        <input
+          type="range"
+          id="volumeControl"
+          min="0"
+          max="1"
+          step="0.1"
+          value="1"
+        />
+        <label for="volumeControl">Гучність</label>
       </div>
-      <div class="best-result-conteiner">
-        <div class="title-best-result">Кращий результат</div>
-        <div class="best-result">0</div>
-      </div>
-
-      <div class="game">
-        <div class="level">
-          <div>Рівень</div>
-          <div class="defenceName">&nbsp</div>
-        </div>
-
-        <div class="putin"></div>
-        <div class="antitankStartPos"></div>
-        <div class="levelImg"></div>
-        <div class="roadSign"></div>
-      </div>
-      <div class="btnContainer">
-        <button class="btnStart">СТАРТ!</button>
-        <button class="btnJump">Хто не скаче - той москаль!</button>
-      </div>
-      <h1>Тисни пробіл щоб путін стрибнув.</h1>
-      <h2>Та як би ти не намагався він все одно здохне!</h2>
-      <div class="donate">
-        <div class="donate_title">
-          Закидуйте на FPV дрони! Збір Сергія Стерненка.
-        </div>
-        <div>
-          Постійна банка:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <a href="https://send.monobank.ua/jar/dzBdJ3737">monobank</a>
-        </div>
-        <div>
-          Приват:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-            href="#"
-            >5168745030910761</a
-          >
-        </div>
-        <div>
-          PayPal:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <a
-            href="mailto:sternenkopaypal@gmail.com"
-            style="text-decoration: underline"
-            >sternenkopaypal@gmail.com</a
-          >
-        </div>
-      </div>
-    </div>
-    <div class="popup__bg">
-      <form class="popup">
-        <svg
-          class="close-popup"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-        >
-          <path
-            fill="#2982ff"
-            d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
-          />
-        </svg>
-        <label>
-          <input type="text" name="name" autocomplete="off" />
-          <div class="label__text">Ваше ім'я</div>
-        </label>
-        <label>
-          <textarea name="message" autocomplete="off"></textarea>
-          <div class="label__text">
-            Коротко та лаконічно, не стримуйте себе! Ваше побажання путіну:
+      <div class="container">
+        <audio src="./audio/Скрябін_Коломийки.mp3"></audio>
+        <div class="timer-conteiner">
+          <div class="timer">
+            <p class="result">Твій путін стрибав</p>
+            <div class="second">00</div>
+            <p>секунд</p>
+            <button class="open-popup">Скринька побажаннь путіну</button>
           </div>
-        </label>
-        <div
-          class="alert-success"
-          id="success"
-          style="display: none"
-          role="alert"
-        ></div>
-        <button type="submit">Відправити</button>
-      </form>
-    </div>
+        </div>
+        <div class="best-result-conteiner">
+          <div class="title-best-result">Кращий результат</div>
+          <div class="best-result">0</div>
+        </div>
 
-    <script src="./userinfo.js"></script>
-    <script src="./script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+        <div class="game">
+          <div class="level">
+            <div>Рівень</div>
+            <div class="defenceName">&nbsp</div>
+          </div>
+
+          <div class="putin"></div>
+          <div class="antitankStartPos"></div>
+          <div class="levelImg"></div>
+          <div class="roadSign"></div>
+        </div>
+        <div class="btnContainer">
+          <button class="btnStart">СТАРТ!</button>
+          <button class="btnJump">Хто не скаче - той москаль!</button>
+        </div>
+        <h1>Тисни пробіл щоб путін стрибнув.</h1>
+        <h2>Та як би ти не намагався він все одно здохне!</h2>
+        <div class="donate">
+          <div class="donate_title">
+            Закидуйте на FPV дрони! Збір Сергія Стерненка.
+          </div>
+          <div>
+            Постійна банка:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://send.monobank.ua/jar/dzBdJ3737">monobank</a>
+          </div>
+          <div>
+            Приват:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+              href="#"
+              >5168745030910761</a
+            >
+          </div>
+          <div>
+            PayPal:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a
+              href="mailto:sternenkopaypal@gmail.com"
+              style="text-decoration: underline"
+              >sternenkopaypal@gmail.com</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="popup__bg">
+        <form class="popup">
+          <svg
+            class="close-popup"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="#2982ff"
+              d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
+            />
+          </svg>
+          <label>
+            <input type="text" name="name" autocomplete="off" />
+            <div class="label__text">Ваше ім'я</div>
+          </label>
+          <label>
+            <textarea name="message" autocomplete="off"></textarea>
+            <div class="label__text">
+              Коротко та лаконічно, не стримуйте себе! Ваше побажання путіну:
+            </div>
+          </label>
+          <div
+            class="alert-success"
+            id="success"
+            style="display: none"
+            role="alert"
+          ></div>
+          <button type="submit">Відправити</button>
+        </form>
+      </div>
+    </div>
   </body>
+  <script src="./preloader.js"></script>
+  <script src="./userinfo.js"></script>
+  <script src="./script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 </html>
