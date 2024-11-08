@@ -45,7 +45,7 @@ function start() {
   if (antitank.classList !== 'antitank') {
     antitank.classList.add('antitank')
     putin.classList.remove('putin-in-Gaaga')
-    putin.classList.add('putin')
+    putin.classList.add('run_putin')
     updateMessageAntitank()
   }
 }
@@ -162,29 +162,35 @@ let isAlive = setInterval(function () {
     window.getComputedStyle(antitank).getPropertyValue('left')
   )
   console.log('putinTop:', putinTop, 'antitankLeft:', antitankLeft)
-  if (putinTop >= 150 && antitankLeft < 50 && antitankLeft > 25) {
-    soundStop(audioSong)
+  if (putinTop >= 150 && antitankLeft < 35 && antitankLeft > 25) {
+    putin.classList.remove('run_putin')
+    putin.classList.add('putin')
     startButton.style.visibility = 'visible'
+    soundStop(audioSong)
+
     alert('путін ЗДОХ! :)')
-    antitank.classList.add('antitank', 'antitankStartPos')
-    antitank.classList.remove('rocket')
-    levelImg.classList.remove('javelin')
-    antitank.classList.remove('jet')
-    antitank.classList.remove('fpv')
-    roadSign.classList.remove('roadSignVisibility')
 
-    if (second > bestResult) {
-      bestResult = second
-      bestResultElement.innerText = second
-    } else if (second < bestResult) {
-      bestResultElement.innerText = bestResult
-    }
+    setTimeout(function () {
+      antitank.classList.add('antitankStartPos')
+      antitank.classList.remove('antitank')
+      antitank.classList.remove('rocket')
+      levelImg.classList.remove('javelin')
+      antitank.classList.remove('jet')
+      antitank.classList.remove('fpv')
+      roadSign.classList.remove('roadSignVisibility')
 
-    second = 0
-    clearInterval(interval)
-    antitank.classList.remove('antitank')
+      if (second > bestResult) {
+        bestResult = second
+        bestResultElement.innerText = second
+      } else if (second < bestResult) {
+        bestResultElement.innerText = bestResult
+      }
+
+      second = 0
+      clearInterval(interval)
+    }, 0)
   }
-}, 1)
+}, 10)
 
 // Music
 
