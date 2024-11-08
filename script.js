@@ -162,7 +162,7 @@ let isAlive = setInterval(function () {
     window.getComputedStyle(antitank).getPropertyValue('left')
   )
   console.log('putinTop:', putinTop, 'antitankLeft:', antitankLeft)
-  if (putinTop >= 150 && antitankLeft < 35 && antitankLeft > 25) {
+  if (putinTop >= 150 && antitankLeft < 30 && antitankLeft > 25) {
     putin.classList.remove('run_putin')
     putin.classList.add('putin')
     startButton.style.visibility = 'visible'
